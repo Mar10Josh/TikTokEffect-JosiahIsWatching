@@ -1,0 +1,5281 @@
+%YAML 1.1
+--- !Scene &1
+name: ""
+guid: {a: 7875085725817850609, b: 329766013828765107}
+editSceneGuid: {a: 0, b: 0}
+calibrateVer: V5
+entities:
+  - __class: Entity
+    name: Camera
+    guid: {a: 17892678610801857370, b: 559697082159424149}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 2}
+      - __class: Camera
+        name: ""
+        guid: {a: 12556560734000964803, b: 7508859945702231687}
+        enabled: true
+        layerVisibleMask: {__class: DynamicBitset, numBits: 64, values: [1, 0]}
+        renderOrder: 10
+        type:
+          __class: CameraType
+          value: PERSPECTIVE
+        clearColor: {r: 0, g: 0, b: 0, a: 1}
+        clearType:
+          __class: CameraClearType
+          value: DEPTH
+        alwaysClear: false
+        viewport: {x: 0, y: 0, w: 1, h: 1}
+        fovy: 66.19000244140625
+        orthoScale: 1
+        zNear: 0.1000000014901161
+        zFar: 1000
+        renderTexture: {localId: 1, path: 00000000-0000-0000-0000-000000000009}
+        isRootCamera: false
+    layer: 0
+  - __class: Entity
+    name: Directional Light
+    guid: {a: 3261253174792506660, b: 16680708562180406145}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 3}
+      - __class: DirectionalLight
+        name: ""
+        guid: {a: 13350271480239526722, b: 3096813384112271290}
+        enabled: true
+        color: {x: 1, y: 1, z: 1}
+        intensiy: 1
+        shadowEnable: false
+        shadowEnableNew: false
+        shadowResolution: {x: 256, y: 256}
+        shadowBias: 0
+        shadowStrength: 1
+        useSoftShadow: false
+        shadowSoftness: 1
+        blurRadius: 1.299999952316284
+        blurNum: 0
+        selfShadowGradient: 0
+        shadowColor: {x: 0, y: 0, z: 0}
+        InitStrength: 0.300000011920929
+        EsmC: 0.03500000014901161
+        lightingLayers: {__class: DynamicBitset, numBits: 64, values: [4294967295, 4294967295]}
+        renderMode:
+          __class: LightRenderMode
+          value: AUTO
+        shadowArea: 100
+        autoShadowFrustum: true
+        shadowFrustumZNear: 1
+        shadowFrustumZFar: 100
+        cookieSize: 1
+        softShadowType:
+          __class: SoftShadowType
+          value: PCF
+        EVSMExponents: {x: 4, y: 4}
+        contactShadowEnable: false
+        lightUnit:
+          __class: LightUnit
+          value: Lux
+    layer: 0
+  - __class: Entity
+    name: Head Tracker
+    guid: {a: 8379151818178674629, b: 13466217462586926526}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 4}
+      - __class: FaceCapture
+        name: ""
+        guid: {a: 12702161849191840742, b: 12767045852338469785}
+        enabled: true
+        faceid: 0
+        captureType:
+          __class: CaptureType
+          value: HUMAN
+        captureVersion:
+          __class: CaptureVersion
+          value: SOLVEPNP
+        alignoffset: {x: 0, y: 0}
+        alignz: 5
+        isGlobal: true
+        useSceneCameraFov: false
+        isPictureMode: false
+        isFaceCaptureEnable: true
+        calirateVersion:
+          __class: CalibrationType
+          value: V5
+        nearPlane: 0.1000000014901161
+        farPlane: 10000
+        useSceneCameraNearFar: false
+        behaviorWhenTrackerDisappear:
+          __class: BehaviorWhenTrackerDisappear
+          value: ALIGN_VISIBILITY_WITH_TRACKER
+        entityRotateType:
+          __class: EntityRotateType
+          value: ROTATE_AROUND_XYZ_AXIS
+    layer: 0
+  - __class: Entity
+    name: Head
+    guid: {a: 957748304294586869, b: 17198878428020873616}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 85}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 13421292167610544185, b: 14411251117797326985}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 00000000-0000-0000-0000-000000000071--00000000-0000-0000-0000-000000000071.material}
+        sortingOrder: 159
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000005}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Sphere
+    guid: {a: 3624177184674614415, b: 15073945177336166561}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 84}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 9242207365951507421, b: 15985248401867733170}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: c3245672-cc20-484d-4edd-61a8c75e4732--c3245672-cc20-484d-4edd-61a8c75e4732.material}
+        sortingOrder: 158
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000001}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube
+    guid: {a: 7153069026686512822, b: 13989687439566794920}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 5}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 7731338566549880824, b: 2060525726097352590}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 0
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (1)
+    guid: {a: 18251469037725825180, b: 9574522862780763321}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 29}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 2829620740723651955, b: 9569430881463139759}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 48
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (2)
+    guid: {a: 7587255714897383781, b: 11828872030528182684}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 55}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 1245573174155474142, b: 7361695775488743810}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 100
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (3)
+    guid: {a: 16592485073429839030, b: 6314071787774784141}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 72}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 4198891786062282983, b: 13847779785680338575}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 134
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (4)
+    guid: {a: 2396665940130053270, b: 5772301373627902890}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 13}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 16377059520624780311, b: 100970935112455066}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 16
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (5)
+    guid: {a: 3192904497157873708, b: 6535601868007746202}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 37}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 7656255417914763322, b: 15065905147623174799}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 64
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (6)
+    guid: {a: 1606282183423802227, b: 11279470799906352062}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 64}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 16738405069427137231, b: 16674859788768527536}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 118
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (7)
+    guid: {a: 2181612101711299158, b: 4773751784682205367}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 76}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 16303792273648053097, b: 11810354532514152617}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 142
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (8)
+    guid: {a: 1027760467393058837, b: 14572331510916437947}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 21}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 2901585600781604053, b: 6275734962212079756}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 32
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (9)
+    guid: {a: 6791548228255702613, b: 17963860938070463360}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 45}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 12054520269565974610, b: 17113185361943844019}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 80
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (10)
+    guid: {a: 7081949295414167811, b: 17940104482609745814}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 68}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 10326073272290370147, b: 7173761545809848993}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 126
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (11)
+    guid: {a: 11980426584742785580, b: 6132088285595106447}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 80}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 17243894552971953971, b: 5053198830639223449}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 150
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (12)
+    guid: {a: 309856233490336246, b: 17975520860073587100}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 9}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 12701738326257756806, b: 9981342612168823453}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 8
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (13)
+    guid: {a: 16450900410734779202, b: 12103673999768507582}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 17}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 9315240510232161430, b: 7448023234596087205}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 24
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (14)
+    guid: {a: 11045859770948030597, b: 12197451927158953124}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 25}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 8164474898434112101, b: 7580476351303973803}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 40
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (15)
+    guid: {a: 598885106021168598, b: 15974158643484044712}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 33}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 8737221081066697816, b: 5680721635799813302}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 56
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (16)
+    guid: {a: 8017289840210117131, b: 16028160265231405440}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 41}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 5423630931604999974, b: 9330279511270803646}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 72
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (17)
+    guid: {a: 4415840349880106943, b: 14142635648981760133}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 49}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 13855079522644341155, b: 15457181631606139582}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 88
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (18)
+    guid: {a: 13205215970201476932, b: 8712788937668539050}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 59}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 17675522841156306223, b: 10402870288697989010}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 108
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (19)
+    guid: {a: 14286269603408264367, b: 11104532527938217883}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 66}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 6504450446510569495, b: 17423676458751171720}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 122
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (20)
+    guid: {a: 10613825499185874152, b: 15173419403921374117}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 70}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 8881965705450399492, b: 10815352706098662307}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 130
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (21)
+    guid: {a: 5713051064242312580, b: 2252536450965406859}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 74}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 2182819481827315375, b: 1860403962076105887}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 138
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (22)
+    guid: {a: 11907712171427873304, b: 11052378542187382971}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 78}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 3261118052928168626, b: 7622054181872313023}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 146
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (23)
+    guid: {a: 522624064811473471, b: 938104740285656704}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 82}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 1244016466238594286, b: 10103840236378510477}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 154
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (24)
+    guid: {a: 17819302330602322990, b: 1449652528393635740}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 7}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 2543274403944407314, b: 2666112529498642342}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 4
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (25)
+    guid: {a: 12560136696240178900, b: 18034027843379438486}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 11}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 13639291926003500710, b: 17582028758323200159}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 12
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (26)
+    guid: {a: 11908622134763744809, b: 6334557342449453242}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 15}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 90182531732753014, b: 7974942741807308959}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 20
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (27)
+    guid: {a: 525562974571342605, b: 15517409422741039767}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 19}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 11620249848671649516, b: 6793972938534706832}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 28
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (28)
+    guid: {a: 16951551968318295910, b: 2406397752283308434}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 23}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 11259090930898819318, b: 7288897418603967163}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 36
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (29)
+    guid: {a: 4490063302251749364, b: 2581278466319627432}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 27}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 15369993632709541572, b: 4242616068314016904}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 44
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (30)
+    guid: {a: 10109690001465471393, b: 1175727117833350817}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 31}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 11117985538286876147, b: 16630240361293571234}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 52
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (31)
+    guid: {a: 18033516855405626498, b: 10760472554909335971}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 35}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 3119226412899665265, b: 17810884933020022191}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 60
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (32)
+    guid: {a: 16810606180934956185, b: 13343191930944581046}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 39}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 13280755091641971369, b: 11655874925280598661}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 68
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (33)
+    guid: {a: 9171155347961166482, b: 13696872574709487295}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 43}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 16088533075872163993, b: 197730205895972510}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 76
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (34)
+    guid: {a: 4125850112725038502, b: 15210405497649082240}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 47}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 17099749161255288154, b: 7323099833969798562}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 84
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (35)
+    guid: {a: 4922186364803371344, b: 4039671734671725952}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 51}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 10970962881800525105, b: 15245615773923622796}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 92
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (36)
+    guid: {a: 3189402547114832774, b: 10117524777293341071}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 57}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 16811838313645333336, b: 9790457877653656764}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 104
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (37)
+    guid: {a: 9965560118864182947, b: 8467068300640351634}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 61}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 598132165053425287, b: 5359436660193397904}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 112
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (38)
+    guid: {a: 6431158670729552892, b: 135912273476670136}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 6}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 12846474986634946217, b: 8106557361219533216}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 2
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (39)
+    guid: {a: 3695936859554263738, b: 15621156312273677726}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 8}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 3334667073799018562, b: 17423365982188037533}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 6
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (40)
+    guid: {a: 6793356797642999846, b: 4448281104906643082}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 10}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 7225576451377171570, b: 9248007494697387145}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 10
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (41)
+    guid: {a: 6647640778115905798, b: 13643714281479048625}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 12}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 5210630156538174931, b: 5885362445748606593}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 14
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (42)
+    guid: {a: 13350391987039050716, b: 16532599860684787089}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 14}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 8378748123663426678, b: 16618789245795380904}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 18
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (43)
+    guid: {a: 11693663975109720535, b: 6028090948290758791}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 16}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 11692276809384287000, b: 7363717227028208778}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 22
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (44)
+    guid: {a: 13855041102173356394, b: 224673200065711528}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 18}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 11620269122919950826, b: 11584035246219174327}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 26
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (45)
+    guid: {a: 3840648754993498914, b: 14705926929337169540}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 20}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 14577019216478731248, b: 18001929570056029603}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 30
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (46)
+    guid: {a: 8379803270700658871, b: 5092140998361601686}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 22}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 6217933794429083132, b: 16972941585733983422}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 34
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (47)
+    guid: {a: 8379225432855666120, b: 9305424262820668835}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 24}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 9891479081192011246, b: 9167145344937877632}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 38
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (48)
+    guid: {a: 741638896078944136, b: 15401367357793488768}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 26}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 9965631768816467974, b: 14225692733328275898}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 42
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (49)
+    guid: {a: 14719612538634419950, b: 1908803378119586738}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 28}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 11983466617087288242, b: 1095247079915273624}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 46
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (50)
+    guid: {a: 7875244626751805011, b: 140700820897612696}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 30}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 4201401537598225522, b: 10194821639477099916}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 50
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (51)
+    guid: {a: 10252071042204271205, b: 18152094716576026029}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 32}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 2182711221583267161, b: 8395487121479854469}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 54
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (52)
+    guid: {a: 17962424602117344922, b: 16555567259635649955}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 34}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 17892056506257072132, b: 13343006406892670635}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 58
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (53)
+    guid: {a: 5998845071689286055, b: 14953344041756045751}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 36}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 2037133904523815776, b: 3092915909682008465}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 62
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (54)
+    guid: {a: 15727008842363845014, b: 15117071997755095472}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 38}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 14938001641743692457, b: 9878309879116595899}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 66
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (55)
+    guid: {a: 7730013279144780816, b: 4387530607659888516}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 40}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 9314643972313409114, b: 4547274029253698950}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 70
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (56)
+    guid: {a: 5858883854458267188, b: 15137859355341204107}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 42}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 14358140832608013286, b: 8290238264277390501}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 74
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (57)
+    guid: {a: 2543296125783253734, b: 15736741686539730859}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 44}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 13064730440956082425, b: 604705049033439919}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 78
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (58)
+    guid: {a: 7802202851943436655, b: 18432982522035892914}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 46}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 17242952877185397581, b: 16735885415927914674}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 82
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (59)
+    guid: {a: 6289045325313446324, b: 7932207416951947701}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 48}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 17891637001768351582, b: 16926634915852214429}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 86
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (60)
+    guid: {a: 1389976202824263892, b: 16953819417359438235}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 50}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 15943725372174624594, b: 12933390200853691264}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 90
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (61)
+    guid: {a: 12195985730757790760, b: 2615394237464091540}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 54}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 11263314817892978687, b: 15837892539255953060}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 98
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (62)
+    guid: {a: 7010328515612798301, b: 11682726786317875115}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 56}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 12629673429174395703, b: 3334280149516068005}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 102
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (63)
+    guid: {a: 6720603852963810489, b: 16803898641405295771}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 58}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 1966030300630043889, b: 6537055674145303977}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 106
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (64)
+    guid: {a: 11909792482604879470, b: 17762171794266182074}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 60}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 15727724208079310526, b: 3973890124912973758}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 110
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (65)
+    guid: {a: 452782802507330424, b: 13482855319899586471}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 63}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 17385798939967680107, b: 2550463436036815037}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 116
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (66)
+    guid: {a: 9101025658138030711, b: 6392850495553506997}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 65}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 13709046603802475290, b: 2220060366210983836}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 120
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (67)
+    guid: {a: 1606549429885081336, b: 7305203317935017354}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 67}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 164715653581830529, b: 13344051647617089444}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 124
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (68)
+    guid: {a: 12917051269963676978, b: 3459908623411268767}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 69}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 2111727171707522973, b: 3113526263115224736}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 128
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (69)
+    guid: {a: 14718605776867919147, b: 3806129211939660976}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 71}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 10684452681756052598, b: 16937281913144827832}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 132
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (70)
+    guid: {a: 6288832980710197646, b: 6244267958603541418}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 73}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 16306713984895027531, b: 11778237741997079990}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 136
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (71)
+    guid: {a: 17601301313778078159, b: 15582640180440299684}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 75}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 8450714989957950137, b: 10870776452412050064}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 140
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (72)
+    guid: {a: 17311954224970886028, b: 16186002577767823021}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 77}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 6287334846114422417, b: 1330801338937622916}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 144
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (73)
+    guid: {a: 6143095017848970516, b: 17886471928609262998}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 79}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 2757285325952515400, b: 16233938844848448959}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 148
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (74)
+    guid: {a: 594564077881544492, b: 13605679798374163373}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 81}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 18251369469501860725, b: 11452110245589464712}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 152
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (75)
+    guid: {a: 7588003162283039477, b: 10821162397198263724}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 83}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 4702084256845529992, b: 10566415704858294156}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 156
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (76)
+    guid: {a: 3694289943111612926, b: 3190056722267477383}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 62}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 4054992983322608971, b: 4440945773633775776}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 114
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (77)
+    guid: {a: 9747129362274413739, b: 846908408162052280}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 52}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 12341721214224282834, b: 14873763507309738369}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 94
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (78)
+    guid: {a: 8810900827801072815, b: 17191223107100043415}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 53}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 1749292807208201962, b: 16849329594421830058}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 96
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (79)
+    guid: {a: 2973788939229886447, b: 18023463249211956910}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 86}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 11839122076432806530, b: 17504675916865299876}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 1
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (80)
+    guid: {a: 2687753062439503921, b: 11311802468359278778}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 87}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 1101567551176098519, b: 17907675207963215032}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 3
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (81)
+    guid: {a: 8232745389979701483, b: 6707205462589588386}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 88}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 4057671012549512045, b: 3411178294164865717}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 5
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (82)
+    guid: {a: 10542761642485451814, b: 13286156282287959703}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 89}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 10539535800616897639, b: 12547105463191309755}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 7
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (83)
+    guid: {a: 3480098120777328698, b: 12925196039258619033}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 90}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 13566315216238202745, b: 17063044973090762398}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 9
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (84)
+    guid: {a: 13566956137755988709, b: 11310928012697465760}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 91}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 2036879669474681484, b: 12685019065995118995}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 11
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (85)
+    guid: {a: 13854971404267423843, b: 15627732074867063448}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 92}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 885348144447155611, b: 12896044474422914727}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 13
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (86)
+    guid: {a: 5926778696226935921, b: 9705834292537946807}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 93}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 1892142946096148995, b: 1179859140705019290}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 15
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (87)
+    guid: {a: 5497558292116271172, b: 3571335338807529102}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 94}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 3694690721820884978, b: 7677544605315401350}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 17
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (88)
+    guid: {a: 5784601980500363210, b: 9266648125295805571}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 95}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 8953799960574966284, b: 14967850137576544440}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 19
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (89)
+    guid: {a: 2037479384618465741, b: 302189734114257836}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 96}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 13349333457900257034, b: 532907519775516081}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 21
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (90)
+    guid: {a: 11189629860948111065, b: 13065188000964262272}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 97}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 14360429858535969620, b: 1812244489898697372}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 23
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (91)
+    guid: {a: 11692059175667508417, b: 3595147212904348591}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 98}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 10829168692622790522, b: 4544798855662639780}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 25
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (92)
+    guid: {a: 17817419994994493068, b: 13458014727598509451}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 99}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 1029518686322873815, b: 1498877887014163368}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 27
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (93)
+    guid: {a: 9676020553621834963, b: 12945156220573871286}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 100}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 958446902491156669, b: 16146744128096075156}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 29
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (94)
+    guid: {a: 13062259509998135937, b: 6718115660341367190}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 101}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 16303779758904137667, b: 10409724380129546942}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 31
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (95)
+    guid: {a: 11620045491740103865, b: 406794128525615020}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 102}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 4341828567306217154, b: 9804693624331407520}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 33
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (96)
+    guid: {a: 5786975591982681568, b: 3892014806163614868}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 103}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 378386433257633033, b: 11994953424288766103}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 35
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (97)
+    guid: {a: 5136317213011961349, b: 867407972371964831}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 104}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 742463099759534683, b: 2946978940037674119}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 37
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (98)
+    guid: {a: 4633846065175899800, b: 4056934802605243286}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 105}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 7804616054537614151, b: 8169881590177980837}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 39
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (99)
+    guid: {a: 7371181651046435456, b: 8670572549221326469}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 106}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 16667199496726561252, b: 17255827835432355499}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 41
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (100)
+    guid: {a: 1821125658831304095, b: 17730123486780407452}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 107}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 11116395441620368063, b: 1629855885315235972}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 43
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (101)
+    guid: {a: 4990107415364881979, b: 17406405681136340396}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 108}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 7223776837133024809, b: 13162566315342340511}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 45
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (102)
+    guid: {a: 4557935519232864979, b: 9083359156644268475}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 109}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 2254108426534120706, b: 17639327998868474041}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 47
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (103)
+    guid: {a: 17674421209810503359, b: 9156770848691658174}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 110}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 8737848414486803222, b: 1956168687710135436}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 49
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (104)
+    guid: {a: 12992040865171990934, b: 10534566254713015737}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 111}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 18036012523902416015, b: 5300110233122484103}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 51
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (105)
+    guid: {a: 234373289660082571, b: 15627635307862136975}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 112}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 5786553890346032200, b: 1218917716069957812}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 53
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (106)
+    guid: {a: 9170480652969938754, b: 6531717690527851448}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 113}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 11046545781353468665, b: 9770468411361476261}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 55
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (107)
+    guid: {a: 15150713538581337651, b: 5901966083214841751}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 114}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 11261186061224633969, b: 9999009667490187658}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 57
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (108)
+    guid: {a: 5426801062207837312, b: 8343973160209247376}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 115}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 17528776205122310068, b: 7378595036218263729}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 59
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (109)
+    guid: {a: 3408658358727909825, b: 9112575010020322739}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 116}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 11550604121829139201, b: 11135157733193244314}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 61
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (110)
+    guid: {a: 6867076808337111481, b: 3303895461963725954}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 117}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 12487335882632900480, b: 12926977881150687903}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 63
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (111)
+    guid: {a: 8595547694531441742, b: 14295796046913461415}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 118}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 5281999863282499473, b: 4828589714489905808}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 65
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (112)
+    guid: {a: 10974373979816403244, b: 10696844507537874832}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 119}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 882744694071883835, b: 4791974126675675313}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 67
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (113)
+    guid: {a: 452065321987423148, b: 6819836734152692869}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 120}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 15439371626133669186, b: 7931606235394655909}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 69
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (114)
+    guid: {a: 10254355282011852607, b: 3299904840563878825}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 121}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 13564868259102445250, b: 18277917369589410214}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 71
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (115)
+    guid: {a: 524587259166494406, b: 290018694539962536}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 122}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 14864573607038185246, b: 279433951036151456}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 73
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (116)
+    guid: {a: 12126091474662725370, b: 15364882899848482176}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 123}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 10613181925256414123, b: 13214497390226153900}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 75
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (117)
+    guid: {a: 3621193698354568878, b: 1893781230074695869}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 124}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 4989990062603053565, b: 2722408012437270682}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 77
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (118)
+    guid: {a: 11119049115744360352, b: 3194284504840154276}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 125}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 14794008460465021346, b: 2816881024879277741}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 79
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (119)
+    guid: {a: 90464546236904914, b: 9819792532967975568}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 126}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 10974112542898501861, b: 15339456450091281551}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 81
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (120)
+    guid: {a: 3622399876456927945, b: 13143257596910876563}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 127}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 13568234199810569571, b: 10042839350642991255}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 83
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (121)
+    guid: {a: 9818555341414841755, b: 8664198803387844755}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 128}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 10683770459995162064, b: 9946983943637966251}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 85
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (122)
+    guid: {a: 7011924855153183647, b: 11235096208193844102}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 129}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 4776427789342440027, b: 14204568888144324515}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 87
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (123)
+    guid: {a: 4270593431872928107, b: 1576591351024393107}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 130}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 13640577595426453945, b: 5137468086139540620}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 89
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (124)
+    guid: {a: 17820058008079235200, b: 11689508251878206880}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 131}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 7369510992929855556, b: 3799358730594924443}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 91
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (125)
+    guid: {a: 17531832686130204134, b: 12117741631997722041}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 132}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 16014860105728627514, b: 12324469280248685494}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 93
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (126)
+    guid: {a: 17170728599138576577, b: 12988562188852136121}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 133}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 1966390187010014216, b: 9684039332499206322}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 95
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (127)
+    guid: {a: 3406930117115471658, b: 12645753942125427079}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 134}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 17962165054292040547, b: 13127654371753455762}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 97
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (128)
+    guid: {a: 14216825827841096520, b: 18232279260293632907}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 135}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 5858583228659140532, b: 3596868335496373161}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 99
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (129)
+    guid: {a: 1820619063311559190, b: 5618169694661287587}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 136}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 4992803347947996925, b: 10884501981388414603}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 101
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (130)
+    guid: {a: 9820636931699160123, b: 16332050388748658054}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 137}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 9746841187549529361, b: 10166427010940685502}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 103
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (131)
+    guid: {a: 238095513376150961, b: 3088508942479905192}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 138}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 13927771649513278485, b: 16602235894033877694}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 105
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (132)
+    guid: {a: 16447503239324374692, b: 17557343804420684691}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 139}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 5423549693335286471, b: 18012389100666125209}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 107
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (133)
+    guid: {a: 1316506224380919428, b: 4089073756590849706}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 140}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 14070379222713684994, b: 6853047375559932552}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 109
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (134)
+    guid: {a: 1462920064210941265, b: 11801866812584313769}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 141}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 3047305686612396141, b: 11549302478887818151}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 111
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (135)
+    guid: {a: 17240448811655219990, b: 2161734330022770614}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 142}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 5930604986018649752, b: 15299687731975045539}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 113
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (136)
+    guid: {a: 3696969148126456926, b: 4229054654530661042}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 143}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 16953515726537589804, b: 3118961963159082409}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 115
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (137)
+    guid: {a: 9315976709383101000, b: 11025327400228964998}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 144}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 379062412313561687, b: 5016426962281816253}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 117
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (138)
+    guid: {a: 7803469147036918290, b: 1184059401372030629}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 145}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 1247294855963529035, b: 13354259838334598335}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 119
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (139)
+    guid: {a: 4921652681630745050, b: 4542504138543019179}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 146}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 2398423362521221107, b: 11065784334214824851}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 121
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (140)
+    guid: {a: 12774806079126081190, b: 141287003697219719}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 147}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 3693498867145084597, b: 864066476251138988}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 123
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (141)
+    guid: {a: 11911285824998895167, b: 3198709416904188053}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 148}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 2397400755738647860, b: 5568184553217984925}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 125
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (142)
+    guid: {a: 6719487467128125869, b: 7939146977847203973}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 149}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 7732066334041414802, b: 14653699706558617743}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 127
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (143)
+    guid: {a: 16448193095915418662, b: 15329361856788545426}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 150}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 13061873063737776055, b: 7570513399062774925}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 129
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (144)
+    guid: {a: 2756474561626869793, b: 8172055796944974989}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 151}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 1532871200764343150, b: 5491020911786697139}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 131
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (145)
+    guid: {a: 7227219182874273467, b: 2997458802824175247}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 152}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 5135522342125574695, b: 10571980075971178932}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 133
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (146)
+    guid: {a: 13061036012951365835, b: 17943413547883303814}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 153}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 11042898964851132447, b: 9862563798008611753}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 135
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (147)
+    guid: {a: 10756226208342563577, b: 4017223951407311285}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 154}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 2975654364419358289, b: 3733113094487859874}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 137
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (148)
+    guid: {a: 10541610989635517655, b: 13577988423866193048}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 155}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 15367054526255773356, b: 12793349099783279276}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 139
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (149)
+    guid: {a: 10612230930375690675, b: 5036123518809731735}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 156}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 3408276884217269780, b: 15250487928857619093}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 141
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (150)
+    guid: {a: 7298088120494541117, b: 4901217690580467126}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 157}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 3335793814995326310, b: 18290389156317887645}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 143
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (151)
+    guid: {a: 15007423910577721113, b: 8250112515977511615}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 158}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 9893898328392226817, b: 4499650648112726922}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 145
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (152)
+    guid: {a: 11118302603861456121, b: 13846119130243116473}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 159}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 12557435569513069022, b: 14059890395594131113}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 147
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (153)
+    guid: {a: 19954257806800682, b: 5874413546247973537}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 160}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 14718678099652571386, b: 9194296081982028958}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 149
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (154)
+    guid: {a: 6864375846918362683, b: 7359797404360800179}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 161}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 2543782339065601091, b: 8622330487522792099}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 151
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (155)
+    guid: {a: 7944541884438560725, b: 8093153039630321280}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 162}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 4414390323103725767, b: 8176259425274879119}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 153
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (156)
+    guid: {a: 3911226409728700862, b: 16636564024072012700}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 163}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 306919923867572399, b: 10185211005533525140}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 155
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Cube (157)
+    guid: {a: 885419197967590398, b: 9386776455819017389}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 164}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 12413376495884502244, b: 11274794687368015757}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 46e5ddce-567b-64ce-77bc-5c106ecd1bfb--46e5ddce-567b-64ce-77bc-5c106ecd1bfb.material}
+        sortingOrder: 157
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000072}
+        castShadow: false
+    layer: 0
+visible: true
+config:
+  __class: Map
+msaa:
+  __class: MSAAMode
+  value: NONE
+jsScriptSystems:
+  - js/JSAssetSystem.js
+  - js/FullBodyAvatarSystem.js
+  - js/GraphSystem.js
+enableMultiTouch: false
+enableLightMultiPass: false
+pixelLightCount: 4
+--- !Transform &2
+name: ""
+guid: {a: 1029434961439008335, b: 6372224128272086966}
+enabled: true
+localPosition: {x: 0, y: 0, z: 40}
+localScale: {x: 1, y: 1, z: 1}
+localOrientation: {w: 1, x: 0, y: 0, z: 0}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &3
+name: ""
+guid: {a: 10827949423485651365, b: 543587625606924957}
+enabled: true
+localPosition: {x: -30, y: 20, z: -20}
+localScale: {x: 1, y: 1, z: 1}
+localOrientation: {w: 0.6123723, x: -0.3535534, y: -0.6123725, z: -0.3535534}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &4
+name: ""
+guid: {a: 3120374465758196861, b: 18114596775481032093}
+enabled: true
+localPosition: {x: 0, y: 0, z: 0}
+localScale: {x: 1, y: 1, z: 1}
+localOrientation: {w: 1, x: 0, y: 0, z: 0}
+children:
+  - {localId: 5}
+  - {localId: 86}
+  - {localId: 6}
+  - {localId: 87}
+  - {localId: 7}
+  - {localId: 88}
+  - {localId: 8}
+  - {localId: 89}
+  - {localId: 9}
+  - {localId: 90}
+  - {localId: 10}
+  - {localId: 91}
+  - {localId: 11}
+  - {localId: 92}
+  - {localId: 12}
+  - {localId: 93}
+  - {localId: 13}
+  - {localId: 94}
+  - {localId: 14}
+  - {localId: 95}
+  - {localId: 15}
+  - {localId: 96}
+  - {localId: 16}
+  - {localId: 97}
+  - {localId: 17}
+  - {localId: 98}
+  - {localId: 18}
+  - {localId: 99}
+  - {localId: 19}
+  - {localId: 100}
+  - {localId: 20}
+  - {localId: 101}
+  - {localId: 21}
+  - {localId: 102}
+  - {localId: 22}
+  - {localId: 103}
+  - {localId: 23}
+  - {localId: 104}
+  - {localId: 24}
+  - {localId: 105}
+  - {localId: 25}
+  - {localId: 106}
+  - {localId: 26}
+  - {localId: 107}
+  - {localId: 27}
+  - {localId: 108}
+  - {localId: 28}
+  - {localId: 109}
+  - {localId: 29}
+  - {localId: 110}
+  - {localId: 30}
+  - {localId: 111}
+  - {localId: 31}
+  - {localId: 112}
+  - {localId: 32}
+  - {localId: 113}
+  - {localId: 33}
+  - {localId: 114}
+  - {localId: 34}
+  - {localId: 115}
+  - {localId: 35}
+  - {localId: 116}
+  - {localId: 36}
+  - {localId: 117}
+  - {localId: 37}
+  - {localId: 118}
+  - {localId: 38}
+  - {localId: 119}
+  - {localId: 39}
+  - {localId: 120}
+  - {localId: 40}
+  - {localId: 121}
+  - {localId: 41}
+  - {localId: 122}
+  - {localId: 42}
+  - {localId: 123}
+  - {localId: 43}
+  - {localId: 124}
+  - {localId: 44}
+  - {localId: 125}
+  - {localId: 45}
+  - {localId: 126}
+  - {localId: 46}
+  - {localId: 127}
+  - {localId: 47}
+  - {localId: 128}
+  - {localId: 48}
+  - {localId: 129}
+  - {localId: 49}
+  - {localId: 130}
+  - {localId: 50}
+  - {localId: 131}
+  - {localId: 51}
+  - {localId: 132}
+  - {localId: 52}
+  - {localId: 133}
+  - {localId: 53}
+  - {localId: 134}
+  - {localId: 54}
+  - {localId: 135}
+  - {localId: 55}
+  - {localId: 136}
+  - {localId: 56}
+  - {localId: 137}
+  - {localId: 57}
+  - {localId: 138}
+  - {localId: 58}
+  - {localId: 139}
+  - {localId: 59}
+  - {localId: 140}
+  - {localId: 60}
+  - {localId: 141}
+  - {localId: 61}
+  - {localId: 142}
+  - {localId: 62}
+  - {localId: 143}
+  - {localId: 63}
+  - {localId: 144}
+  - {localId: 64}
+  - {localId: 145}
+  - {localId: 65}
+  - {localId: 146}
+  - {localId: 66}
+  - {localId: 147}
+  - {localId: 67}
+  - {localId: 148}
+  - {localId: 68}
+  - {localId: 149}
+  - {localId: 69}
+  - {localId: 150}
+  - {localId: 70}
+  - {localId: 151}
+  - {localId: 71}
+  - {localId: 152}
+  - {localId: 72}
+  - {localId: 153}
+  - {localId: 73}
+  - {localId: 154}
+  - {localId: 74}
+  - {localId: 155}
+  - {localId: 75}
+  - {localId: 156}
+  - {localId: 76}
+  - {localId: 157}
+  - {localId: 77}
+  - {localId: 158}
+  - {localId: 78}
+  - {localId: 159}
+  - {localId: 79}
+  - {localId: 160}
+  - {localId: 80}
+  - {localId: 161}
+  - {localId: 81}
+  - {localId: 162}
+  - {localId: 82}
+  - {localId: 163}
+  - {localId: 83}
+  - {localId: 164}
+  - {localId: 84}
+  - {localId: 85}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &5
+name: ""
+guid: {a: 3405762366849927507, b: 3114610855881475230}
+enabled: true
+localPosition: {x: -0.001026857, y: -13.64408, z: 0.0009471665}
+localScale: {x: 1.001964, y: -0.05614946, z: 1.3017}
+localOrientation: {w: 0.4427833, x: 0.554715, y: -0.5474866, z: -0.443275}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &6
+name: ""
+guid: {a: 6363014835484593887, b: 13914562774357942203}
+enabled: true
+localPosition: {x: 19.49025, y: -13.52707, z: 4.289915}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.3017}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &7
+name: ""
+guid: {a: 4993396861992641010, b: 1307037256336076729}
+enabled: true
+localPosition: {x: -19.10272, y: -13.75875, z: -4.202296}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.3017}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &8
+name: ""
+guid: {a: 8305390397087012388, b: 709529400721958571}
+enabled: true
+localPosition: {x: 0.3885555, y: -13.64174, z: 0.08667326}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &9
+name: ""
+guid: {a: 5062260653281990869, b: 5498640242682506625}
+enabled: true
+localPosition: {x: -0.001026857, y: -13.64408, z: 0.0009471665}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.3017}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &10
+name: ""
+guid: {a: 10110477894282068422, b: 1512217254371434682}
+enabled: true
+localPosition: {x: 19.49025, y: -13.52707, z: 4.289915}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &11
+name: ""
+guid: {a: 670015574040124449, b: 15096010220707904422}
+enabled: true
+localPosition: {x: -19.10272, y: -13.75875, z: -4.202296}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &12
+name: ""
+guid: {a: 13639732277952620467, b: 13076636706346513581}
+enabled: true
+localPosition: {x: 0.3885555, y: -13.64174, z: 0.08667326}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &13
+name: ""
+guid: {a: 3116773182737941332, b: 2714196206492680852}
+enabled: true
+localPosition: {x: -9.048438, y: -13.6984, z: -1.989896}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.3017}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &14
+name: ""
+guid: {a: 14071536462044326082, b: 6841000722738418849}
+enabled: true
+localPosition: {x: 10.44283, y: -13.58139, z: 2.299073}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &15
+name: ""
+guid: {a: 13350591502410429943, b: 7305159800177205914}
+enabled: true
+localPosition: {x: -28.15013, y: -13.81307, z: -6.193138}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &16
+name: ""
+guid: {a: 166129580823838182, b: 14887039372521517739}
+enabled: true
+localPosition: {x: -8.658854, y: -13.69606, z: -1.904168}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &17
+name: ""
+guid: {a: 17890871620437774534, b: 3691576428855688846}
+enabled: true
+localPosition: {x: -9.048438, y: -13.6984, z: -1.989896}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &18
+name: ""
+guid: {a: 17674289356931992781, b: 10127987760916037284}
+enabled: true
+localPosition: {x: 10.44283, y: -13.58139, z: 2.299073}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &19
+name: ""
+guid: {a: 3263719846079346473, b: 14636020844630384781}
+enabled: true
+localPosition: {x: -28.15013, y: -13.81307, z: -6.193138}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &20
+name: ""
+guid: {a: 15294719044815255937, b: 8393936701164261820}
+enabled: true
+localPosition: {x: -8.658854, y: -13.69606, z: -1.904168}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &21
+name: ""
+guid: {a: 1747496632055049446, b: 5054966826900356010}
+enabled: true
+localPosition: {x: -9.048438, y: -13.6984, z: -1.989896}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &22
+name: ""
+guid: {a: 11620822715132509117, b: 420132741030641852}
+enabled: true
+localPosition: {x: 10.44283, y: -13.58139, z: 2.299073}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &23
+name: ""
+guid: {a: 5714912232859481051, b: 13192679285834072708}
+enabled: true
+localPosition: {x: -28.15013, y: -13.81307, z: -6.193138}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &24
+name: ""
+guid: {a: 9821947647122873079, b: 14526253118508549516}
+enabled: true
+localPosition: {x: -8.658854, y: -13.69606, z: -1.904168}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &25
+name: ""
+guid: {a: 13204654329128215819, b: 8430570219214237315}
+enabled: true
+localPosition: {x: -9.048438, y: -13.6984, z: -1.989896}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &26
+name: ""
+guid: {a: 12847769184781892945, b: 3084605171769798276}
+enabled: true
+localPosition: {x: 10.44283, y: -13.58139, z: 2.299073}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &27
+name: ""
+guid: {a: 11116701145183597063, b: 8908593868604962226}
+enabled: true
+localPosition: {x: -28.15013, y: -13.81307, z: -6.193138}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &28
+name: ""
+guid: {a: 954956349825508935, b: 14528956998474055839}
+enabled: true
+localPosition: {x: -8.658854, y: -13.69606, z: -1.904168}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &29
+name: ""
+guid: {a: 11479541309565261701, b: 17156979659677254059}
+enabled: true
+localPosition: {x: 0.05682277, y: -21.32472, z: -0.05241297}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.3017}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &30
+name: ""
+guid: {a: 13709313516996659725, b: 17642460081094205871}
+enabled: true
+localPosition: {x: 19.5481, y: -21.20771, z: 4.236555}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &31
+name: ""
+guid: {a: 9604279471562040835, b: 6830041538414673305}
+enabled: true
+localPosition: {x: -19.04487, y: -21.43939, z: -4.255656}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &32
+name: ""
+guid: {a: 10469278571188304032, b: 1398663304100056985}
+enabled: true
+localPosition: {x: 0.4464054, y: -21.32238, z: 0.03331232}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &33
+name: ""
+guid: {a: 4417141026043606583, b: 6973301077124722819}
+enabled: true
+localPosition: {x: 0.05682277, y: -21.32472, z: -0.05241297}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &34
+name: ""
+guid: {a: 13782897827657220176, b: 3204770631956715156}
+enabled: true
+localPosition: {x: 19.5481, y: -21.20771, z: 4.236555}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &35
+name: ""
+guid: {a: 11694855810393632775, b: 12353664025981408181}
+enabled: true
+localPosition: {x: -19.04487, y: -21.43939, z: -4.255656}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &36
+name: ""
+guid: {a: 13640033970968744200, b: 17540738325936078266}
+enabled: true
+localPosition: {x: 0.4464054, y: -21.32238, z: 0.03331232}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &37
+name: ""
+guid: {a: 18325083992710269988, b: 17936446922159100073}
+enabled: true
+localPosition: {x: -8.990589, y: -21.37904, z: -2.043256}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &38
+name: ""
+guid: {a: 16664041348265447439, b: 5625827476481176472}
+enabled: true
+localPosition: {x: 10.50068, y: -21.26203, z: 2.245713}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &39
+name: ""
+guid: {a: 18106848367109970058, b: 13059937673505996201}
+enabled: true
+localPosition: {x: -28.09228, y: -21.49371, z: -6.246498}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &40
+name: ""
+guid: {a: 6002426640291367942, b: 5904211751177610152}
+enabled: true
+localPosition: {x: -8.601008, y: -21.3767, z: -1.957528}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &41
+name: ""
+guid: {a: 17314711775060660944, b: 714168740063382200}
+enabled: true
+localPosition: {x: -8.990589, y: -21.37904, z: -2.043256}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &42
+name: ""
+guid: {a: 3336705909795361555, b: 12513553926315382965}
+enabled: true
+localPosition: {x: 10.50068, y: -21.26203, z: 2.245713}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &43
+name: ""
+guid: {a: 3623850252776550585, b: 8475113015996374158}
+enabled: true
+localPosition: {x: -28.09228, y: -21.49371, z: -6.246498}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &44
+name: ""
+guid: {a: 3910812636235087982, b: 5054578572533492371}
+enabled: true
+localPosition: {x: -8.601008, y: -21.3767, z: -1.957528}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &45
+name: ""
+guid: {a: 9028563438981095225, b: 16153039631697243290}
+enabled: true
+localPosition: {x: -8.990589, y: -21.37904, z: -2.043256}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &46
+name: ""
+guid: {a: 9315822573236618947, b: 12943406002400609205}
+enabled: true
+localPosition: {x: 10.50068, y: -21.26203, z: 2.245713}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &47
+name: ""
+guid: {a: 14069441754590770033, b: 10428157549286404261}
+enabled: true
+localPosition: {x: -28.09228, y: -21.49371, z: -6.246498}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &48
+name: ""
+guid: {a: 454239936842830905, b: 12460519643323449225}
+enabled: true
+localPosition: {x: -8.601008, y: -21.3767, z: -1.957528}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &49
+name: ""
+guid: {a: 12701237721333557319, b: 3560444163890182070}
+enabled: true
+localPosition: {x: -8.990589, y: -21.37904, z: -2.043256}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &50
+name: ""
+guid: {a: 7803894413729167219, b: 2328191664532106627}
+enabled: true
+localPosition: {x: 10.50068, y: -21.26203, z: 2.245713}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &51
+name: ""
+guid: {a: 18035045910249348223, b: 3452460441650126263}
+enabled: true
+localPosition: {x: -28.09228, y: -21.49371, z: -6.246498}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &52
+name: ""
+guid: {a: 6434175233156549998, b: 13091929078487295391}
+enabled: true
+localPosition: {x: -28.03189, y: -29.51212, z: -6.302205}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301702}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &53
+name: ""
+guid: {a: 1749599027683743649, b: 16631622930800515474}
+enabled: true
+localPosition: {x: -27.97681, y: -36.82483, z: -6.353009}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301702}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &54
+name: ""
+guid: {a: 10614072758764123431, b: 13870343255791756727}
+enabled: true
+localPosition: {x: -8.601008, y: -21.3767, z: -1.957528}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301702}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &55
+name: ""
+guid: {a: 11981658290929220677, b: 9844280337088554374}
+enabled: true
+localPosition: {x: 0.1178083, y: -29.42171, z: -0.1086656}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &56
+name: ""
+guid: {a: 18036813415808524126, b: 13324766311875513002}
+enabled: true
+localPosition: {x: 19.60908, y: -29.3047, z: 4.180303}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &57
+name: ""
+guid: {a: 11695141544335934324, b: 15175493438134426795}
+enabled: true
+localPosition: {x: -18.98388, y: -29.53638, z: -4.311909}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &58
+name: ""
+guid: {a: 12703272997174300126, b: 385003020730910113}
+enabled: true
+localPosition: {x: 0.507391, y: -29.41937, z: -0.02294016}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &59
+name: ""
+guid: {a: 596444527659843330, b: 13617742327126601107}
+enabled: true
+localPosition: {x: 0.1178083, y: -29.42171, z: -0.1086656}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &60
+name: ""
+guid: {a: 15224539911719214396, b: 9160875152519090836}
+enabled: true
+localPosition: {x: 19.60908, y: -29.3047, z: 4.180303}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &61
+name: ""
+guid: {a: 10542375250706211887, b: 8464329041320546718}
+enabled: true
+localPosition: {x: -18.98388, y: -29.53638, z: -4.311909}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &62
+name: ""
+guid: {a: 5423513795092037154, b: 857819949850889147}
+enabled: true
+localPosition: {x: -18.92536, y: -37.30597, z: -4.365887}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &63
+name: ""
+guid: {a: 1751523298175590362, b: 11889632722129853629}
+enabled: true
+localPosition: {x: 0.507391, y: -29.41937, z: -0.02294016}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &64
+name: ""
+guid: {a: 11407090306427508732, b: 9840672936320986279}
+enabled: true
+localPosition: {x: -8.929604, y: -29.47602, z: -2.099509}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &65
+name: ""
+guid: {a: 814082061410432744, b: 8726196543746935954}
+enabled: true
+localPosition: {x: 10.56167, y: -29.35902, z: 2.18946}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &66
+name: ""
+guid: {a: 7946882612162379718, b: 2773258165055333009}
+enabled: true
+localPosition: {x: -8.929604, y: -29.47602, z: -2.099509}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &67
+name: ""
+guid: {a: 3624463624952091791, b: 14176164427522964365}
+enabled: true
+localPosition: {x: 10.56167, y: -29.35902, z: 2.18946}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &68
+name: ""
+guid: {a: 15369690084066893809, b: 14542418795646529696}
+enabled: true
+localPosition: {x: -8.929604, y: -29.47602, z: -2.099509}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &69
+name: ""
+guid: {a: 6075226464146385236, b: 550580433660989361}
+enabled: true
+localPosition: {x: 10.56167, y: -29.35902, z: 2.18946}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &70
+name: ""
+guid: {a: 6578422342113736651, b: 1590304815335607190}
+enabled: true
+localPosition: {x: -8.929604, y: -29.47602, z: -2.099509}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &71
+name: ""
+guid: {a: 1604151509883082508, b: 4502435657537353917}
+enabled: true
+localPosition: {x: 10.56167, y: -29.35902, z: 2.18946}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301702}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &72
+name: ""
+guid: {a: 959175961445513974, b: 4865346882123842495}
+enabled: true
+localPosition: {x: 0.1789352, y: -37.53747, z: -0.1650487}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &73
+name: ""
+guid: {a: 5422749536034240702, b: 12795298865062722977}
+enabled: true
+localPosition: {x: 19.67021, y: -37.42046, z: 4.123919}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &74
+name: ""
+guid: {a: 1389607807591165726, b: 10052659721236221313}
+enabled: true
+localPosition: {x: 0.1789352, y: -37.53747, z: -0.1650487}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &75
+name: ""
+guid: {a: 4270346061825357727, b: 7557936742059708544}
+enabled: true
+localPosition: {x: 19.67021, y: -37.42046, z: 4.123919}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &76
+name: ""
+guid: {a: 11621808313144716277, b: 2202618291566203533}
+enabled: true
+localPosition: {x: -8.868476, y: -37.59178, z: -2.155892}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &77
+name: ""
+guid: {a: 16807676066995253365, b: 10503958140421709979}
+enabled: true
+localPosition: {x: 10.6228, y: -37.47477, z: 2.133077}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &78
+name: ""
+guid: {a: 17242945102040884540, b: 5609696978273899702}
+enabled: true
+localPosition: {x: -8.868476, y: -37.59178, z: -2.155892}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &79
+name: ""
+guid: {a: 10685988349781041209, b: 16844479066073717381}
+enabled: true
+localPosition: {x: 10.6228, y: -37.47477, z: 2.133077}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301702}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &80
+name: ""
+guid: {a: 2758920888225781536, b: 4732702092908085639}
+enabled: true
+localPosition: {x: -8.868476, y: -37.59178, z: -2.155892}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &81
+name: ""
+guid: {a: 15439666281592608714, b: 13650207972188895382}
+enabled: true
+localPosition: {x: 10.6228, y: -37.47477, z: 2.133077}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301702}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &82
+name: ""
+guid: {a: 16808878769307069981, b: 15791878318268632227}
+enabled: true
+localPosition: {x: -8.868476, y: -37.59178, z: -2.155892}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301702}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &83
+name: ""
+guid: {a: 4561353122135644211, b: 5252777089725545390}
+enabled: true
+localPosition: {x: 10.6228, y: -37.47477, z: 2.133077}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301702}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &84
+name: ""
+guid: {a: 11046470992417307160, b: 10308734749102349205}
+enabled: true
+localPosition: {x: 0, y: 0, z: 0}
+localScale: {x: 2.844743, y: 2.844743, z: 2.844743}
+localOrientation: {w: 0.7471458, x: 0.1162796, y: 0.6544092, z: -0.000936461}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &85
+name: ""
+guid: {a: 12196566109779094885, b: 882696530390608574}
+enabled: true
+localPosition: {x: 0, y: 0, z: 0}
+localScale: {x: 1, y: 1, z: 1}
+localOrientation: {w: 1, x: 0, y: 0, z: 0}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &86
+name: ""
+guid: {a: 2972805228291712041, b: 18202759760253966756}
+enabled: true
+localPosition: {x: -0.001026857, y: -13.64408, z: 0.0009471665}
+localScale: {x: -1.001964, y: 0.05614946, z: 1.3017}
+localOrientation: {w: -0.443275, x: 0.5474866, y: 0.554715, z: -0.4427833}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &87
+name: ""
+guid: {a: 5929301272680616756, b: 14169138792830489531}
+enabled: true
+localPosition: {x: 19.49025, y: -13.52707, z: 4.289915}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.3017}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &88
+name: ""
+guid: {a: 10325038437454171996, b: 4095025158706132153}
+enabled: true
+localPosition: {x: -19.10272, y: -13.75875, z: -4.202296}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.3017}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &89
+name: ""
+guid: {a: 8525155992625390142, b: 16241120923981046165}
+enabled: true
+localPosition: {x: 0.3885555, y: -13.64174, z: 0.08667326}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &90
+name: ""
+guid: {a: 9097818186727262526, b: 6108012718353823636}
+enabled: true
+localPosition: {x: -0.001026857, y: -13.64408, z: 0.0009471665}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.3017}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &91
+name: ""
+guid: {a: 9170951374541241252, b: 16836197816416010655}
+enabled: true
+localPosition: {x: 19.49025, y: -13.52707, z: 4.289915}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &92
+name: ""
+guid: {a: 235243799804375239, b: 11153807012686106548}
+enabled: true
+localPosition: {x: -19.10272, y: -13.75875, z: -4.202296}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &93
+name: ""
+guid: {a: 3983350023291211875, b: 3520350468816382375}
+enabled: true
+localPosition: {x: 0.3885555, y: -13.64174, z: 0.08667326}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &94
+name: ""
+guid: {a: 9245836759857263428, b: 3821666207973038484}
+enabled: true
+localPosition: {x: -9.048438, y: -13.6984, z: -1.989896}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.3017}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &95
+name: ""
+guid: {a: 9821177673654692461, b: 6889478654268668859}
+enabled: true
+localPosition: {x: 10.44283, y: -13.58139, z: 2.299073}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &96
+name: ""
+guid: {a: 1388743654868085773, b: 4769585025876449680}
+enabled: true
+localPosition: {x: -28.15013, y: -13.81307, z: -6.193138}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &97
+name: ""
+guid: {a: 2756293471608532986, b: 9885467466023087501}
+enabled: true
+localPosition: {x: -8.658854, y: -13.69606, z: -1.904168}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &98
+name: ""
+guid: {a: 8377042518982937081, b: 6822384762237772197}
+enabled: true
+localPosition: {x: -9.048438, y: -13.6984, z: -1.989896}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &99
+name: ""
+guid: {a: 11261095121400677484, b: 4890379536425770384}
+enabled: true
+localPosition: {x: 10.44283, y: -13.58139, z: 2.299073}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &100
+name: ""
+guid: {a: 7154718727849911357, b: 2534412129452597656}
+enabled: true
+localPosition: {x: -28.15013, y: -13.81307, z: -6.193138}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &101
+name: ""
+guid: {a: 5281679027101908704, b: 11895372943409272497}
+enabled: true
+localPosition: {x: -8.658854, y: -13.69606, z: -1.904168}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &102
+name: ""
+guid: {a: 15225014009958470001, b: 12804868679377989304}
+enabled: true
+localPosition: {x: -9.048438, y: -13.6984, z: -1.989896}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &103
+name: ""
+guid: {a: 668600862462907691, b: 18376153138329497497}
+enabled: true
+localPosition: {x: 10.44283, y: -13.58139, z: 2.299073}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &104
+name: ""
+guid: {a: 10757526330235977740, b: 709430759246992257}
+enabled: true
+localPosition: {x: -28.15013, y: -13.81307, z: -6.193138}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &105
+name: ""
+guid: {a: 14001086653177631890, b: 9155187138632264876}
+enabled: true
+localPosition: {x: -8.658854, y: -13.69606, z: -1.904168}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &106
+name: ""
+guid: {a: 8234741281615137390, b: 434237607489447558}
+enabled: true
+localPosition: {x: -9.048438, y: -13.6984, z: -1.989896}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &107
+name: ""
+guid: {a: 9028342295469690503, b: 1983172358310754954}
+enabled: true
+localPosition: {x: 10.44283, y: -13.58139, z: 2.299073}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &108
+name: ""
+guid: {a: 7297017477491416489, b: 18261473567215557030}
+enabled: true
+localPosition: {x: -28.15013, y: -13.81307, z: -6.193138}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &109
+name: ""
+guid: {a: 10540620333042149474, b: 3062226781299612837}
+enabled: true
+localPosition: {x: -8.658854, y: -13.69606, z: -1.904168}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &110
+name: ""
+guid: {a: 10038038485889470556, b: 7448860404492425095}
+enabled: true
+localPosition: {x: 0.05682277, y: -21.32472, z: -0.05241297}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.3017}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &111
+name: ""
+guid: {a: 4486123540334848629, b: 17275929945640565436}
+enabled: true
+localPosition: {x: 19.5481, y: -21.20771, z: 4.236555}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &112
+name: ""
+guid: {a: 17891446201635781921, b: 14770562983907204792}
+enabled: true
+localPosition: {x: -19.04487, y: -21.43939, z: -4.255656}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &113
+name: ""
+guid: {a: 12415338490786900582, b: 8382286303383943566}
+enabled: true
+localPosition: {x: 0.4464054, y: -21.32238, z: 0.03331232}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &114
+name: ""
+guid: {a: 11475464728859865404, b: 4828948789104676502}
+enabled: true
+localPosition: {x: 0.05682277, y: -21.32472, z: -0.05241297}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &115
+name: ""
+guid: {a: 10254450090705137617, b: 8332934932207391898}
+enabled: true
+localPosition: {x: 19.5481, y: -21.20771, z: 4.236555}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &116
+name: ""
+guid: {a: 7371289400899103803, b: 7846982806884426116}
+enabled: true
+localPosition: {x: -19.04487, y: -21.43939, z: -4.255656}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &117
+name: ""
+guid: {a: 11259852142493563327, b: 16197773071553314435}
+enabled: true
+localPosition: {x: 0.4464054, y: -21.32238, z: 0.03331232}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &118
+name: ""
+guid: {a: 6937558302249189284, b: 9003476989392898965}
+enabled: true
+localPosition: {x: -8.990589, y: -21.37904, z: -2.043256}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &119
+name: ""
+guid: {a: 17748466590752207566, b: 10768957541177348480}
+enabled: true
+localPosition: {x: 10.50068, y: -21.26203, z: 2.245713}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &120
+name: ""
+guid: {a: 5134812988982433111, b: 5846977862102287253}
+enabled: true
+localPosition: {x: -28.09228, y: -21.49371, z: -6.246498}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &121
+name: ""
+guid: {a: 6795710021148872575, b: 3684312663372572330}
+enabled: true
+localPosition: {x: -8.601008, y: -21.3767, z: -1.957528}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &122
+name: ""
+guid: {a: 667059604597189510, b: 1972466695537671049}
+enabled: true
+localPosition: {x: -8.990589, y: -21.37904, z: -2.043256}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &123
+name: ""
+guid: {a: 8740439655367786328, b: 979297796936010686}
+enabled: true
+localPosition: {x: 10.50068, y: -21.26203, z: 2.245713}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &124
+name: ""
+guid: {a: 11189251924138406936, b: 16275722463930093226}
+enabled: true
+localPosition: {x: -28.09228, y: -21.49371, z: -6.246498}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &125
+name: ""
+guid: {a: 4272934975733336543, b: 10617757111875875207}
+enabled: true
+localPosition: {x: -8.601008, y: -21.3767, z: -1.957528}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &126
+name: ""
+guid: {a: 13928374528889782693, b: 7515693133831995820}
+enabled: true
+localPosition: {x: -8.990589, y: -21.37904, z: -2.043256}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &127
+name: ""
+guid: {a: 4129412545222388606, b: 2251128286036087220}
+enabled: true
+localPosition: {x: 10.50068, y: -21.26203, z: 2.245713}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &128
+name: ""
+guid: {a: 18393291642142218830, b: 2359154431198889095}
+enabled: true
+localPosition: {x: -28.09228, y: -21.49371, z: -6.246498}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &129
+name: ""
+guid: {a: 16951844471449561136, b: 3825042431577818025}
+enabled: true
+localPosition: {x: -8.601008, y: -21.3767, z: -1.957528}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &130
+name: ""
+guid: {a: 16737068886884763947, b: 11760534170748997767}
+enabled: true
+localPosition: {x: -8.990589, y: -21.37904, z: -2.043256}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &131
+name: ""
+guid: {a: 4849732097907832206, b: 6484881239986138042}
+enabled: true
+localPosition: {x: 10.50068, y: -21.26203, z: 2.245713}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &132
+name: ""
+guid: {a: 15367128971756214478, b: 15353496234732548791}
+enabled: true
+localPosition: {x: -28.09228, y: -21.49371, z: -6.246498}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &133
+name: ""
+guid: {a: 523692161291500265, b: 14086044790873384856}
+enabled: true
+localPosition: {x: -28.03189, y: -29.51212, z: -6.302205}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301702}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &134
+name: ""
+guid: {a: 11334982584103367883, b: 17661619005534253197}
+enabled: true
+localPosition: {x: -27.97681, y: -36.82483, z: -6.353009}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301702}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &135
+name: ""
+guid: {a: 3480085568567965542, b: 16589980624182024065}
+enabled: true
+localPosition: {x: -8.601008, y: -21.3767, z: -1.957528}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301702}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &136
+name: ""
+guid: {a: 10397090973434655795, b: 17529204159314068127}
+enabled: true
+localPosition: {x: 0.1178083, y: -29.42171, z: -0.1086656}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &137
+name: ""
+guid: {a: 4560989944631652445, b: 13247467256772874886}
+enabled: true
+localPosition: {x: 19.60908, y: -29.3047, z: 4.180303}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &138
+name: ""
+guid: {a: 14789887186789636542, b: 5291147970007217581}
+enabled: true
+localPosition: {x: -18.98388, y: -29.53638, z: -4.311909}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &139
+name: ""
+guid: {a: 15729480156476479059, b: 17015646620300615603}
+enabled: true
+localPosition: {x: 0.507391, y: -29.41937, z: -0.02294016}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &140
+name: ""
+guid: {a: 9963684001525179072, b: 852240391927238797}
+enabled: true
+localPosition: {x: 0.1178083, y: -29.42171, z: -0.1086656}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &141
+name: ""
+guid: {a: 11045790168539665369, b: 14019444905083108789}
+enabled: true
+localPosition: {x: 19.60908, y: -29.3047, z: 4.180303}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &142
+name: ""
+guid: {a: 7371280959243919009, b: 309696223561385119}
+enabled: true
+localPosition: {x: -18.98388, y: -29.53638, z: -4.311909}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &143
+name: ""
+guid: {a: 4198330187462463803, b: 14614008240429563824}
+enabled: true
+localPosition: {x: -18.92536, y: -37.30597, z: -4.365887}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &144
+name: ""
+guid: {a: 667031112986895612, b: 6715828886036080819}
+enabled: true
+localPosition: {x: 0.507391, y: -29.41937, z: -0.02294016}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &145
+name: ""
+guid: {a: 17745143754556957168, b: 900977729101132944}
+enabled: true
+localPosition: {x: -8.929604, y: -29.47602, z: -2.099509}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &146
+name: ""
+guid: {a: 5351649838725082153, b: 15367542520585854600}
+enabled: true
+localPosition: {x: 10.56167, y: -29.35902, z: 2.18946}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &147
+name: ""
+guid: {a: 7585806171534883963, b: 18434624600527388047}
+enabled: true
+localPosition: {x: -8.929604, y: -29.47602, z: -2.099509}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &148
+name: ""
+guid: {a: 7800517936741930659, b: 17753453464724626304}
+enabled: true
+localPosition: {x: 10.56167, y: -29.35902, z: 2.18946}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &149
+name: ""
+guid: {a: 5783734138382668253, b: 8234510217040963214}
+enabled: true
+localPosition: {x: -8.929604, y: -29.47602, z: -2.099509}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &150
+name: ""
+guid: {a: 10901951466026005929, b: 11686069606213545145}
+enabled: true
+localPosition: {x: 10.56167, y: -29.35902, z: 2.18946}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &151
+name: ""
+guid: {a: 11622001442344209112, b: 11193499435287286928}
+enabled: true
+localPosition: {x: -8.929604, y: -29.47602, z: -2.099509}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &152
+name: ""
+guid: {a: 7083380304460787493, b: 8946255454416043662}
+enabled: true
+localPosition: {x: 10.56167, y: -29.35902, z: 2.18946}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301702}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &153
+name: ""
+guid: {a: 11981108025596300717, b: 3542619793133278396}
+enabled: true
+localPosition: {x: 0.1789352, y: -37.53747, z: -0.1650487}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &154
+name: ""
+guid: {a: 2684634508971583259, b: 3686450374691977123}
+enabled: true
+localPosition: {x: 19.67021, y: -37.42046, z: 4.123919}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &155
+name: ""
+guid: {a: 6720859576724008611, b: 7149817792019937204}
+enabled: true
+localPosition: {x: 0.1789352, y: -37.53747, z: -0.1650487}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &156
+name: ""
+guid: {a: 8957309772272990620, b: 7054579247212241293}
+enabled: true
+localPosition: {x: 19.67021, y: -37.42046, z: 4.123919}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &157
+name: ""
+guid: {a: 6794015417753716112, b: 5061879999864373165}
+enabled: true
+localPosition: {x: -8.868476, y: -37.59178, z: -2.155892}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &158
+name: ""
+guid: {a: 10397249303343981721, b: 146279089196616892}
+enabled: true
+localPosition: {x: 10.6228, y: -37.47477, z: 2.133077}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &159
+name: ""
+guid: {a: 15297896668915552937, b: 11350637215369068437}
+enabled: true
+localPosition: {x: -8.868476, y: -37.59178, z: -2.155892}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &160
+name: ""
+guid: {a: 598260942013271247, b: 6753514688371381652}
+enabled: true
+localPosition: {x: 10.6228, y: -37.47477, z: 2.133077}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301702}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &161
+name: ""
+guid: {a: 8593608761069635550, b: 9536775826382352551}
+enabled: true
+localPosition: {x: -8.868476, y: -37.59178, z: -2.155892}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301701}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &162
+name: ""
+guid: {a: 668479154831544436, b: 17311304680664407995}
+enabled: true
+localPosition: {x: 10.6228, y: -37.47477, z: 2.133077}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301702}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &163
+name: ""
+guid: {a: 6575917429877811865, b: 8210919377616543633}
+enabled: true
+localPosition: {x: -8.868476, y: -37.59178, z: -2.155892}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301702}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &164
+name: ""
+guid: {a: 4414924346893677754, b: 18411970757743190673}
+enabled: true
+localPosition: {x: 10.6228, y: -37.47477, z: 2.133077}
+localScale: {x: -1.001964, y: 0.05614947, z: 1.301702}
+localOrientation: {w: -0.4432751, x: 0.5474865, y: 0.554715, z: -0.4427832}
+parent: {localId: 4}
+mobility:
+  __class: Mobility
+  value: Dynamic
